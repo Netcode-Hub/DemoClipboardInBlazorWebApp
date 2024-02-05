@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoClipboardInBlazorWebApp", "DemoClipboardInBlazorWebApp\DemoClipboardInBlazorWebApp.csproj", "{1EDDEF9C-BF6E-4E16-BBB1-57FB5D60AFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EDDEF9C-BF6E-4E16-BBB1-57FB5D60AFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDDEF9C-BF6E-4E16-BBB1-57FB5D60AFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDDEF9C-BF6E-4E16-BBB1-57FB5D60AFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDDEF9C-BF6E-4E16-BBB1-57FB5D60AFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20C752DB-027D-4CB2-B7DA-BE1B3770F8D7}
+	EndGlobalSection
+EndGlobal

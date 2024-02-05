@@ -1,0 +1,49 @@
+﻿@page "/"
+@using NetcodeHub.Packages.Components.Toast
+@using NetcodeHub.Packages.Extensions.Clipboard
+@inject ClipboardService clipboardService
+@inject ToastService toastService
+@rendermode InteractiveServer
+
+<input class="w-25 form-control" @bind="Text" />
+<button class="btn btn-warning" @onclick="CopyToClipboard">
+    <span class="bi bi-copy"></span>
+</button>
+
+@Paste
+<button class="btn btn-warning" @onclick="PasteFromClipboard">
+    <span class="bi bi-clipboard"></span>
+</button>
+<Toast @ref="toastService.ToastComponent" />
+
+@code {
+    string? Text;
+    string? Paste;
+
+    async Task CopyToClipboard()
+    {
+        try
+        {
+            await clipboardService.CopyAsync(Text!);
+            toastService.ShowSuccessToast("Success", "Copied To Clipboard");
+        }
+        catch
+        {
+            toastService.ShowErrorToast("Success", "Copied To Clipboard");
+        }
+    }
+
+    async Task PasteFromClipboard()
+    {
+        try
+        {
+            Paste = await clipboardService.ReadAsyncToLower();
+            StateHasChanged();
+            toastService.ShowInfoToast("Success", "Pasted from Clipboard");
+        }
+        catch
+        {
+            toastService.ShowErrorToast("Alert", "Cannot read clipboard");
+        }
+    }
+}
